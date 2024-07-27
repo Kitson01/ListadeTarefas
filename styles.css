@@ -8,27 +8,55 @@
 /* Estilos gerais do corpo da página */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f0f4f8;
+    background-color: #e9f5ff;
+    color: #333;
     text-align: center;
     padding: 20px;
 }
 
+/* Animação do título do projeto */
+@keyframes slideIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Estilos do cabeçalho */
+header {
+    margin-bottom: 20px;
+}
+
+#project-title {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5em;
+    color: #007BFF;
+    animation: slideIn 1s ease-out;
+}
+
 /* Estilos do título */
-h1 {
+h2 {
     color: #333;
     margin-bottom: 20px;
 }
 
-/* Estilos do campo de entrada e botão */
+/* Estilos do container de entrada */
+.input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Estilos do campo de entrada */
 #taskInput {
     padding: 10px;
     border: 2px solid #007BFF;
     border-radius: 5px;
-    width: calc(100% - 22px);
-    max-width: 400px;
+    width: 300px;
     font-size: 16px;
 }
 
+/* Estilos do botão */
 #addTaskButton {
     padding: 10px 20px;
     border: none;
@@ -37,8 +65,14 @@ h1 {
     border-radius: 5px;
     font-size: 16px;
     cursor: pointer;
-    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
     transition: background-color 0.3s ease;
+}
+
+#addTaskButton i {
+    font-size: 16px;
 }
 
 #addTaskButton:hover {
@@ -60,7 +94,9 @@ li {
     background-color: white;
     border: 1px solid #ddd;
     max-width: 400px;
-    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -73,4 +109,20 @@ li:hover {
 .completed {
     text-decoration: line-through;
     color: #aaa;
+}
+
+/* Estilos dos botões de ação */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.action-buttons i {
+    cursor: pointer;
+    color: #007BFF;
+    transition: color 0.3s ease;
+}
+
+.action-buttons i:hover {
+    color: #0056b3;
 }
